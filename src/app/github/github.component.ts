@@ -55,7 +55,7 @@ export class GitHubComponent {
     debounceTime(400),distinctUntilChanged())
     .subscribe(value => {
       this.isLoading = true;
-      this._githubservice.getGitHubData('greg')
+      this._githubservice.getGitHubData(value)
       .subscribe(data => {
         this.isLoading = true;
         this.users = data.items;
